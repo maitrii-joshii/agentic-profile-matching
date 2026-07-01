@@ -1,0 +1,32 @@
+RYAN PARK
+ryan.park@email.com | +1-206-555-2002 | Seattle, WA
+
+PROFESSIONAL SUMMARY
+----------------------------------------
+Site Reliability Engineer with 5 years of experience ensuring reliability,
+scalability, and performance of large-scale distributed systems. Expert in
+observability, incident response, and capacity planning.
+
+SKILLS
+----------------------------------------
+Observability: Prometheus, Grafana, Datadog, OpenTelemetry, Jaeger
+Infra: Kubernetes, Terraform, Ansible, AWS (EKS, EC2, RDS), GCP
+Languages: Go, Python, Bash
+Incident Management: PagerDuty, blameless post-mortems, runbook authoring
+SLO/SLA: Error budgets, reliability roadmapping, capacity planning
+
+EXPERIENCE
+----------------------------------------
+Senior SRE — Google, Seattle, WA (Mar 2021 – Present)
+  * Maintained 99.99% SLO for Google Maps API serving 40M daily requests
+  * Led incident response for 3 SEV-1 incidents; authored post-mortems adopted org-wide
+  * Built capacity forecasting model — prevented 2 outages by scaling proactively
+  * Automated 80% of toil via Go tooling; freed 40% of team time for project work
+
+SRE — Expedia Group, Seattle, WA (Jan 2019 – Feb 2021)
+  * Reduced MTTR from 35 minutes to 8 minutes by improving alerting and runbooks
+  * Migrated on-premise monitoring stack to cloud-native (Prometheus + Grafana)
+
+EDUCATION
+----------------------------------------
+B.S. Computer Science — University of Washington, 2019

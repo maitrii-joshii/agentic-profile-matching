@@ -1,0 +1,28 @@
+# Core LangChain / LangGraph
+langchain>=0.2
+langgraph>=0.1
+langchain-core
+langchain-community
+langchain-deepseek
+
+# Vector store
+chromadb
+
+# Embeddings
+sentence-transformers
+
+# Resume parsing
+pdfplumber
+
+# UI
+streamlit
+
+# Environment config
+python-dotenv
+
+# Testing
+pytest
+pytest-mock
+
+# Utilities
+tqdm

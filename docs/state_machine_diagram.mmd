@@ -1,0 +1,12 @@
+stateDiagram-v2
+    [*] --> ParseJD
+    ParseJD --> ExtractRequirements
+    ExtractRequirements --> SearchResumes
+    SearchResumes --> RankCandidates
+    RankCandidates --> GenerateReport
+    GenerateReport --> HumanFeedbackLoop
+
+    HumanFeedbackLoop --> ExtractRequirements : refinement_requested = true
+    HumanFeedbackLoop --> SearchResumes : new_search_requested = true
+    HumanFeedbackLoop --> RankCandidates : re_rank_requested = true
+    HumanFeedbackLoop --> [*] : approved = true

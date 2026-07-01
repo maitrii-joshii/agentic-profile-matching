@@ -1,0 +1,128 @@
+# Agentic Profile Matching
+
+## Assignment Requirements
+
+### Part A: Agent Architecture (40%)
+
+Create `matching_agent.py` using **LangGraph**.
+
+### Agent State Design
+
+The agent state should maintain:
+
+* Conversation history
+* Job requirements understanding
+* Candidate shortlist
+* Ranking reasoning and decision history
+
+### Agent Workflow (Graph Structure)
+
+```
+START
+   ↓
+Parse Job Description
+   ↓
+Extract Requirements
+   ↓
+Search Resumes
+   ↓
+Rank Candidates
+   ↓
+Generate Report
+   ↓
+Human Feedback Loop
+   ↓
+END
+```
+
+### Tools Available to the Agent
+
+The agent should utilize the following tools:
+
+* All File System Tools (from Milestone 1)
+* RAG Search Tool (from Milestone 2)
+
+Additional tools:
+
+```python
+extract_requirements(jd: str)
+```
+
+* Parse the job description.
+* Separate **must-have** requirements from **nice-to-have** requirements.
+
+```python
+compare_candidates(candidate_ids: list)
+```
+
+* Perform a head-to-head comparison between selected candidates.
+
+```python
+generate_interview_questions(candidate_id: str)
+```
+
+* Generate customized technical and behavioral screening questions for a candidate.
+
+---
+
+## Part B: Interactive Features (30%)
+
+### Conversational Interface
+
+The agent should support natural language interactions such as:
+
+* "Find me candidates with React and 3+ years experience."
+* "Compare the top 3 matches side by side."
+* "Why did John rank higher than Jane?"
+
+### Iterative Refinement
+
+The agent should allow users to refine hiring requirements during the conversation.
+
+Capabilities include:
+
+* Updating job requirements dynamically
+* Re-ranking candidates based on revised criteria
+* Explaining why candidate rankings changed
+
+---
+
+## Part C: Advanced Capabilities (30%)
+
+### Multi-Round Screening
+
+The agent should support a multi-stage candidate evaluation process:
+
+**Round 1**
+
+* Screen the complete resume database.
+* Select the top 10 matching candidates.
+
+**Round 2**
+
+* Perform detailed analysis of the top 10 candidates.
+* Evaluate technical skills, experience, projects, and overall suitability.
+
+**Final Round**
+
+* Generate a Hire / No-Hire recommendation.
+* Provide supporting reasoning for the final decision.
+
+### Explainability
+
+The system should generate transparent and interpretable results by:
+
+* Producing detailed match reports
+* Highlighting strengths and gaps for each candidate
+* Providing improvement suggestions for borderline candidates
+
+---
+
+# Submission Guidelines
+
+The final submission should include:
+
+* LangGraph-based agent implementation
+* State machine diagram (visual representation)
+* Chat interface (CLI or Streamlit/Gradio)
+* Test scenarios demonstrating at least five conversation flows
